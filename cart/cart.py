@@ -70,6 +70,6 @@ class Cart:
         """
         Удаляем корзину из сеанса
         """
-        del self.session[settings.CART_SESSION_IN]
+        del self.session[settings.CART_SESSION_ID]
         self.save()
 
