@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import django.core.mail.backends.console
+
 import cart.apps
 import orders.apps
 import shop.apps
@@ -137,3 +139,6 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 CART_SESSION_ID = 'cart'
+
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
